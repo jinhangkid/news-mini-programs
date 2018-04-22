@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/newsDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4C9FE0",
+    "navigationBarTitleText": "快读 资讯",
+    "navigationBarTextStyle": "white"
+  }
+}

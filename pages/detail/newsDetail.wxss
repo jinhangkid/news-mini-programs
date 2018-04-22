@@ -1,0 +1,33 @@
+/* pages/detail/newsDetail.wxss */
+.title{
+  margin: 20rpx 10rpx 20rpx 20rpx;
+  font-size: 50rpx;
+}
+.newsMessage{
+  font-size: 30rpx;
+  color: gray;
+}
+
+.source{
+  margin-left: 20rpx;
+  margin-right: 35rpx;
+}
+.readCount{
+  position: absolute;
+  right: 40rpx;
+}
+
+.content{
+  font-size: 36rpx;
+  color: rgba(72, 72, 27, 1);
+  margin: 20rpx;
+  line-height: 44rpx;
+}
+.strong{
+  font-weight: bold;
+}
+
+.image{
+  width: 100%;
+}
+

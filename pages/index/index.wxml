@@ -1,0 +1,31 @@
+<!--index.wxml-->
+  <view class='tabbar-top'>
+    <view  wx:for="{{tabbarArray}}" data-idx = "{{index}}" class="tabbarbutton {{currentTab==index ?  'seleted' : ''}}"  bindtap="tabbarTap">
+      <text class='tabbarTitle'>{{item.title}}</text>
+      <view class='tabbarLine'></view>
+    </view>
+  </view>
+
+ <!-- <view class='list'>  -->
+  <view class="news-hot" bindtap='hotnewsTap'>
+        <view class='tag'>热门</view>
+        <view class='title'>{{hotTitle}}</view>
+        <view class='hot-bottom'>
+          <view class='from'>{{hotForm}}</view>
+          <view class='time'>{{hotTime}}</view>
+        </view>
+        <image class='img' src = "{{hotImg?hotImg:'/img/news.png'}}" mode='scaleToFill'></image>
+   </view>
+
+    <view class='news-list-bg' wx:for="{{listResult}}" bindtap='newsTap' data-idx = "{{index}}">
+      <view class='news-list'>
+          <view class='title'>{{item.title}}</view>
+          <view class='list-bottom'>
+            <view class='from'>{{item.source}}</view>
+            <view class='time'>{{item.time}}</view>
+          </view>
+        <image class='img' src = "{{item.img?item.img:'/img/news.png'}}"></image>
+       </view>
+   </view> 
+<!-- </view> -->
+

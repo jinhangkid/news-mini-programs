@@ -1,0 +1,146 @@
+/**index.wxss**/
+
+.tabbar-top{
+    display: flex;
+      width: 100%;
+        height: 100%;
+          background-color: rgba(76,159,224,1);
+}
+.tabbarbutton{
+    display: flex;
+    
+}
+.tabbar-top{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(76,159,224,1);
+}
+.tabbarbutton{
+  display: flex;
+  width: 107rpx;
+  height: 70rpx;
+  font-size: 27rpx;
+  padding-top: 12rpx;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabbarbutton .tabbarTitle{
+  color: white;
+  padding-bottom: 8rpx;
+}
+
+.tabbarbutton.seleted .tabbarTitle{
+  font-size: 30rpx;
+  color: white;
+  padding-bottom: 8rpx;
+}
+
+.tabbarbutton.seleted .tabbarLine{
+  width: 26rpx;
+  height: 4rpx;
+  background-color: white;
+}
+.tabbarLine{
+  width: 26rpx;
+  height: 4rpx;
+  background-color: rgba(76,159,224,1);
+}
+
+.list{
+  position: relative;
+  z-index:-2;  
+  background-color: rgba(247,244,236,1);
+}
+ .news-hot{
+  position: relative;
+  margin: 15rpx;
+  height: 400rpx;
+}
+ .news-hot .tag{
+  position: absolute;
+  right: 0;
+  padding:6rpx 15rpx;
+  border-radius: 0 0 0 18rpx;
+  color: white;
+  background-color: rgba(255, 0, 0, 0.5);
+  font-size: 24rpx;
+}
+ .news-hot .img{
+ position: absolute;
+ z-index: -1;
+ width: 100%;
+ height: 100%;
+ border-radius: 3px;
+}
+ .news-hot .title{
+  position: absolute;
+  bottom: 60rpx;
+  font-size: 28rpx;
+  color:white; 
+  left: 15rpx;
+  right: 15rpx;
+  z-index: 1;
+}
+.hot-bottom{
+  position: absolute;
+  text-align: left;
+  bottom: 15rpx;
+  left: 15rpx;
+  display: flex;
+}
+ .news-hot .hot-bottom .from{
+  color: gray;
+  font-size: 26rpx;
+  padding-right: 30rpx;
+  z-index: 1;
+}
+
+ .news-hot .hot-bottom .time{
+  color: gray;
+  font-size: 26rpx;
+  z-index: 1;
+}
+
+ .news-list-bg{
+  background: white;
+}
+.news-list{
+  position: relative;
+  align-items: center;
+  height: 180rpx;
+  margin: 0 40rpx;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.news-list .title{
+  opacity: 0.8;
+  font-size: 40rpx;
+  line-height: 56rpx;
+}
+.news-list .img{
+  position: absolute;
+  width: 190rpx;
+  height: 120rpx;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.news-list .title{
+  position: absolute;
+  right: 220rpx;
+  top: 28rpx;
+  font-size: 28rpx;
+  line-height: 34rpx;
+}
+.news-list .list-bottom{
+  position:absolute;
+  bottom:30rpx;
+  display: flex; 
+  font-size: 25rpx;
+  color: gray;
+}
+ .news-list .list-bottom .time{
+  margin-left: 30rpx;
+}

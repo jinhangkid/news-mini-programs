@@ -1,0 +1,15 @@
+<view class='title'>{{title}}</view>
+<view class='newsMessage'>
+  <text class='source'>{{source}}</text>
+  <text class='tiem'>{{time}}</text>
+  <text class='readCount'>{{readCount}}</text>
+</view>
+<view class='content' wx:for="{{content}}">
+  <view class='strong' wx:if="{{item.type == 'strong'}}">
+  {{item.text}}
+  </view>
+  <view class='body' wx:if="{{item.type == 'p'}}">
+  {{item.text}}
+  </view>
+   <image class='image' wx:if="{{item.type == 'image'}}" src="{{item.src?item.src:'/img/news.png'}}" mode='widthFix'></image> 
+</view>
