@@ -1,6 +1,5 @@
 // pages/detail/newsDetail.js
 Page({
- 
   data: {
     title:'',
     source:'',
@@ -8,7 +7,6 @@ Page({
     readCount:'',
     content:[]
   },
- 
   onLoad: function (options) {
     //接受传递ID
     this.getNewsDetail(options.newsId)

@@ -14,7 +14,13 @@ Page({
     hotTime:'',
     hotImg:'',
     listResult: [],
-    resultData:[]
+    resultData:[],
+    navIndexTemp:0
+  },
+  onPullDownRefresh(){
+    this.getNewsListData(this.data.navIndexTemp,()=>{
+      wx.stopPullDownRefresh()
+    })
   },
   onLoad(){
     this.getNewsListData(0);
@@ -25,6 +31,9 @@ Page({
       currentTab: e.currentTarget.dataset.idx
     })
     this.getNewsListData(e.currentTarget.dataset.idx)
+    this.setData({
+      navIndexTemp: e.currentTarget.dataset.idx
+    })
   },
   //热门新闻点击
   hotnewsTap:function(e){
@@ -39,7 +48,10 @@ Page({
       url: '/pages/detail/newsDetail?newsId=' + this.data.resultData[index+1].id
     })
   },
-  getNewsListData(typeIndex){
+  getNewsListData(typeIndex,callback){
+    wx.showLoading({
+      title: '加载中',
+    })
     wx.request({
       url: 'https://test-miniprogram.com/api/news/list',
       data:{
@@ -53,6 +65,9 @@ Page({
         // console.log(result)
         this.setHotData(result)
         this.setListData(result)
+      },complete:()=>{
+        callback && callback()
+        wx.hideLoading()
       }
     })
   },
